@@ -1,0 +1,35 @@
+.listMenu {
+    display: flex;
+    padding-block: 1em;
+    padding-inline: 1.5em;
+    margin-top: 1em;
+    margin-inline: 4em;
+    gap: 7em;
+    width: fit-content;
+    border-radius: 1em;
+    box-shadow : 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    z-index: 2;
+
+    & ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        & li {
+            color:#b2b2b2 ;
+            cursor: pointer;
+            
+        }
+        & .active {
+            color: $Dark-color;
+            font-weight: 600;
+            padding-bottom: 1em;
+            border-bottom: 1px solid $Dark-color;
+
+        }
+
+    }
+}
+.active_list {
+    background: darkblue;
+}

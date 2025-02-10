@@ -1,0 +1,37 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 1em;
+    padding-inline: 1.5em;
+    border-bottom: 1px solid rgba($color: #000 , $alpha: .2);
+    margin-bottom: 2em;
+    width: 100%;
+    background-color: #fff;
+    & .navbar_icons {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        svg {
+            font-size: 2rem;
+            cursor: pointer;
+        }
+    }
+    & .navbar_logo {
+        margin-right: 15em;
+    } 
+    & .navbar_menu {
+        font-size: .8em;
+        & ul {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            & li {
+                & a {
+                    text-transform: uppercase;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}

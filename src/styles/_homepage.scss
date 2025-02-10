@@ -1,0 +1,256 @@
+.section1 {
+    height: 100vh;
+    background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0,0) 50% ) , url("https://motosport-store-newdemo.myshopify.com/cdn/shop/files/h1sl1.jpg?v=1721470198&width=600") no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+   & .sec1_content {
+    display: flex;
+    flex-direction: column;
+    padding-top: 16em;
+    gap: 3em;
+    width: 55%;
+    font-weight: 800;
+    align-items: center;
+    & h1 {
+        font-size: 3em;
+    }
+   }
+}
+.section2 {
+    margin-inline: 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    gap: 2em;
+    & .sec2_leftcontent {
+        position: relative;
+        width: 50%;
+        & img {
+            width: 100%;
+        }
+        &:hover {
+            transform: scale(1.04);
+        }
+        & .sec2_leftcontent_content {
+            position: absolute;
+            top: 40%;
+            left: 8%;
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            text-align: center;
+            & .btn {
+                border: 1px solid #000;
+                color: #000;
+                margin-left: 2.1em;
+                & .btn_line {
+                    color: #000;
+                }
+            }
+
+            
+        }
+    }
+    & .sec2_rightcontent {
+        width: 50%;
+        position: relative;
+        & img {
+            width: 100%;
+
+        }
+        &:hover {
+            transform: scale(1.04);
+        }
+        & .sec2_rightcontent_content {
+            position: absolute;
+            top: 40%;
+            left: 8%;
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            text-align: center;
+            & .btn {
+                border: 1px solid #000;
+                color: #000;
+                margin-left: 1.5em;
+                & .btn_line {
+                    color: #000;
+                }
+            }
+
+        }
+    }
+
+}
+.section3 {
+    height: 100vh;
+    
+    h3 {
+        text-align: center;
+    }
+    & .container {
+        padding: 2em;
+        
+        // overflow: hidden;
+    
+    & .inner {
+        display: flex;
+        cursor: grab;
+        gap: 1.5em;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        scroll-padding: 1em;
+        &::-webkit-scrollbar 
+        {
+            display: none;
+        }
+
+        & .slide {
+            
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1.5em;
+            flex-shrink: 0;
+            scroll-snap-align: start;
+            width: calc((100% - 3em) / 3);
+            width: 99%;
+
+
+
+        }
+    }
+        
+    }
+
+}
+.section4 {
+    height : 120vh;
+    position: relative;
+    
+ & .container {
+    height: 100vh;
+    background: url("//motosport-store-newdemo.myshopify.com/cdn/shop/files/h1bgcd.jpg?v=1721620352&width=1000") no-repeat center center/cover;
+    display : flex;
+    & .container_image {
+        width: 50%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        animation: scale 3s infinite ease-in-out;
+
+    }
+    & .inner_container {
+        
+        display: flex;
+        flex-direction: column;
+        padding: 8em 3em;
+        gap: 1.5em;
+        color: #fff;
+        font-size: 1.2em;
+        & h1 {
+        color: #ff6600;
+        font-weight: 700;
+        font-size: 2.5em !important;
+    
+        }
+        & .prices {
+            display: flex;
+            gap: 1em;
+            & p {
+                text-decoration: line-through;
+            }
+        }
+    }
+
+ }
+
+}
+.section5 {
+    height: 280vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    & .tabs {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2em;
+        & .tab {
+            cursor: pointer;
+            font-weight: 600;
+            padding-bottom: .5em;
+            color: #808080;
+            transition: .3s;
+            &.active_tab {
+                color: #000;
+                border-bottom: 2px solid  #ff6600;
+            }
+            &:hover {
+                color: #000;
+
+            }
+
+        }
+        
+    }
+    & .tabs_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2em;
+        margin-top: 5em;
+        & .tab_products {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5em;
+            justify-content: center;
+            padding-inline: 2em;
+            display: none;
+            &.active_products {
+                display: flex;
+
+
+                
+            }
+            & .productCard {
+                width: calc((100% - 3em) / 3);
+            }
+        }
+    }
+}
+.section6 {
+    height: 45vh;
+    & .images_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            width: 17%;
+            cursor: pointer;
+            &:hover {
+                background:  linear-gradient(0deg, #000 0%, rgba(0, 0, 0,0) 50%);
+            }
+            
+        }
+    }
+}
+@keyframes scale {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+    
+}

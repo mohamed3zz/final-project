@@ -1,0 +1,109 @@
+.footer {
+    background-color: #f2f2f2;
+    margin-top: 2em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+     
+    & .footer_content {
+        display: flex;
+        justify-content: space-between;
+        padding:  2em;
+        gap: .2em;
+        padding-bottom: 3em;
+        border-bottom : 1px solid rgba(0, 0, 0, 0.2);
+        & ul {
+            display: flex;
+            gap: 1em;
+            flex-direction: column;
+            align-items: center;
+            & li {
+                opacity: .8;
+                font-weight: 400;
+                width: 15em;
+                &:hover {
+                    opacity: 1;
+                    transform: translateX(10px);
+                }
+                &.footer_title {
+                
+                    font-weight: 600;
+                    opacity: 1;
+                    font-size: 1.2em;
+                    padding-bottom: 1.5em;
+                    padding-left: 1em;
+                    
+                }
+                &.footer_logo {
+                    // padding: 1em 2em ;
+                    // font-weight: 600;
+                    opacity: 1;
+                    padding-bottom: 1.5em;
+                    padding-right: .5em;
+                }
+
+            }
+
+
+        }
+    }
+    & .footer_input {
+        display: flex;
+        
+        & input {
+            width: 100%;
+            padding: 1em;
+            border: none;
+            outline: none;
+            border-radius: 1em 0 0 1em;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            border-right: none;
+
+        }
+        & button {
+            border-radius: 0 1em 1em 0;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            border-left: none;
+            padding: 1em;
+            background-color: $Dark-color;
+            color: #fff;
+            cursor: pointer;
+            
+        }
+    }
+    & .footer_social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+        padding: 1em;
+        & svg {
+            border: 1px solid #fff;
+            font-size: 2em;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+    }
+    & .footer_end {
+        padding: 1em;
+        font-size: 1.2em;
+        opacity: .8;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        & .footer_end_icons {
+            display: flex;
+            gap: 1em;
+            & svg {
+                font-size: 2em;
+                color: #808080;
+            }
+        }
+
+    }
+
+}
+svg:hover {
+    color: #808080;
+    border: 1px solid #000;
+}

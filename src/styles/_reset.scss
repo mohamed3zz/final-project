@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oleo+Script:wght@400;700&family=Racing+Sans+One&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.4;
+    font-family: "Montserrat", serif;
+}
+a {
+    text-decoration: none;
+    display: inline-block;
+    color: $gray-color-text;
+     &.active {
+        color: $Dark-color;
+     }
+}
+ul {
+    list-style: none;
+}
+*::-webkit-scrollbar {
+    width: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: $Dark-color;
+    border-radius: 2em;
+}
+*::-webkit-scrollbar-track {
+    margin: 1em;
+}
