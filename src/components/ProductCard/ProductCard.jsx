@@ -1,16 +1,29 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
-export default function ProductCard() {
+
+export default function ProductCard({product_name, product_new_price, product_old_price, product_image ,documentId}) {
+  const navigate = useNavigate();
   return (
-    <div className='productCard'>
+    <div className='productCard' onClick={() => {
+      if (documentId) {
+        navigate(documentId);
+        setTimeout(() => {
+          scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        }, 0);
+      }
+    }}>
         <div className='productCard_img'>
-            <img src="https://motosport-store-newdemo.myshopify.com/cdn/shop/files/2_334cc606-e212-412b-802f-755b37542341.jpg?v=1721378504&width=600" alt="" />
+            <img src={`${product_image}`}alt="" />
         </div>
         <div className='productCard_content'>
-            <h6>Handlebar Phone Mount</h6>
+            <h6>{product_name}</h6>
             <div className='productCard_content_price'>
-                <h6>$80.00</h6>
-                <p>$90.00</p>
+                <h6>{product_new_price}</h6>
+                <p>{product_old_price}</p>
             </div>
             </div>
       

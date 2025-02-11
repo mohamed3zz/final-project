@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product7s",
+  "info": {
+    "singularName": "product7",
+    "pluralName": "product7s",
+    "displayName": "product7"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "product_name": {
+      "type": "string",
+      "required": true
+    },
+    "product_new_price": {
+      "type": "string",
+      "required": true
+    },
+    "product_old_price": {
+      "type": "string",
+      "required": true
+    },
+    "product_image": {
+      "type": "text",
+      "required": true
+    },
+    "product_discription": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

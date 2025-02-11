@@ -207,6 +207,7 @@
         align-items: center;
         gap: 2em;
         margin-top: 5em;
+        transition: .4s;
         & .tab_products {
             display: flex;
             flex-wrap: wrap;
@@ -214,8 +215,10 @@
             justify-content: center;
             padding-inline: 2em;
             display: none;
+            transition: .4s;
             &.active_products {
                 display: flex;
+                transition: .4s;
 
 
                 
