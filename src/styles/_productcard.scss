@@ -9,6 +9,16 @@
     border-radius: 1em;
     padding: 1em;
     cursor: pointer;
+    transition: .3s;
+
+    &:hover {
+        // transform: scale(1.03);
+        img {
+            transform: scale(1.02);
+
+        }
+        
+    }
     
     & .productCard_img {
         width: 100%;

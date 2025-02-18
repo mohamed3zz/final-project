@@ -1,6 +1,8 @@
 import Axios from "axios";
 
-const Base_Url = "http://localhost:1337/api/";
+const Base_Url = "http://localhost:1337";
+
+
 
 export const AxiosConfig = Axios.create({
     baseURL: Base_Url,

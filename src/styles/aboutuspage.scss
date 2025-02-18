@@ -1,0 +1,25 @@
+// .AboutUsPage {
+//    height: 400vh;
+//     &.sec1 {
+//         height: 100vh;
+//         background-color: red;
+//         position: relative;
+//         & img {
+//             width: 100%;
+//         }
+//         & .sec1_content {
+//             position: absolute;
+//             color: aliceblue;
+//         }
+//     }
+// }
+.AboutUsPage {
+    h1{
+        text-align: center;
+        font-size: 2.5em;
+        font-weight: 600;
+    }
+    & .aboutsec1 {
+        
+    }
+}

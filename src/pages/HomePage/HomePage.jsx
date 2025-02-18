@@ -2,7 +2,11 @@ import React from 'react'
 import Button from '../../components/Button/Button'
 import { motion as Motion } from 'framer-motion'
 import ProductCard from '../../components/ProductCard/ProductCard';
-import { getfifthproducts, getfourthproducts, getproducts, getsecondproducts, getseventhproducts, getsixthproducts, getthirdproducts } from '../../apis/FetchApi';
+import {getproducts,getsixthproducts} from '../../apis/FetchApi';
+import { NavLink } from 'react-router-dom';
+
+
+// import Loader from '../../components/Loader/Loader';
  
 export default function HomePage() {
 const tab = document.querySelectorAll(".section5 .tabs .tab");
@@ -28,21 +32,17 @@ function removeactivecontainer () {
     tab.classList.remove("active_products");
   })
   }
-  const {data} = getproducts();
+  const {data } = getproducts();
   console.log(data?.data?.data);
+ 
+  // if (isLoading) return<Loader/>
 
-  const {data:seconddata} = getsecondproducts();
-  console.log(seconddata?.data?.data);
-  const {data:thirddata} = getthirdproducts();
-  console.log(thirddata?.data?.data);
-  const {data:fourthdata} = getfourthproducts();
-  console.log(fourthdata?.data?.data);
-  const {data:fifthdata} = getfifthproducts();
-  console.log(fifthdata?.data?.data);
-  const {data:sixthdata} = getsixthproducts();
-  console.log(sixthdata?.data?.data);
-  const {data:seventhdata} = getseventhproducts();
-  console.log(seventhdata?.data?.data);
+  // const {data:seconddata} = getsecondproducts();
+  // console.log(seconddata?.data?.data);
+  
+  const {data:data2} = getsixthproducts();
+  // console.log(sixthdata?.data?.data);
+
   
 
   return (
@@ -77,28 +77,28 @@ function removeactivecontainer () {
         <Motion.div className='container' >
           <Motion.div drag="x" className='inner'>
             <Motion.div className='slide'>
-            {data?.data?.data.map((item) => (
+            {data?.data?.data.slice(0,3).map((item) => (
               <ProductCard key={item.id} product_name={item.product_name} product_image={item.product_image} product_new_price={item.product_new_price} product_old_price={item.product_old_price} documentId={item.documentId} product_discription={item.product_discription} />
               
             ))}
             
             </Motion.div>
             <Motion.div className='slide'>
-            {seconddata?.data?.data.map((item) => (
+            {data?.data?.data.slice(3,6).map((item) => (
               <ProductCard key={item.id} product_name={item.product_name} product_image={item.product_image} product_new_price={item.product_new_price} product_old_price={item.product_old_price} documentId={item.documentId} product_discription={item.product_discription} />
               
             ))}
 
             </Motion.div>
             <Motion.div className='slide'>
-            {thirddata?.data?.data.map((item) => (
+            {data?.data?.data.slice(6,9).map((item) => (
               <ProductCard key={item.id} product_name={item.product_name} product_image={item.product_image} product_new_price={item.product_new_price} product_old_price={item.product_old_price} documentId={item.documentId} product_discription={item.product_discription}/>
               
             ))}
 
             </Motion.div>
             <Motion.div className='slide'>
-            {fourthdata?.data?.data.map((item) => (
+            {data?.data?.data.slice(9,12).map((item) => (
               <ProductCard key={item.id} product_name={item.product_name} product_image={item.product_image} product_new_price={item.product_new_price} product_old_price={item.product_old_price} documentId={item.documentId} product_discription={item.product_discription}/>
               
             ))}
@@ -140,19 +140,19 @@ function removeactivecontainer () {
         </div>
         <div className='tabs_container'>
           <div className='tab_products active_products'>
-          {fifthdata?.data?.data.map((item) => (
+          {data?.data?.data.slice(12,21).map((item) => (
               <ProductCard key={item.id} product_name={item.product_name} product_image={item.product_image} product_new_price={item.product_new_price} product_old_price={item.product_old_price} documentId={item.documentId} product_discription={item.product_discription}/>
               
             ))}
           </div>
           <div className='tab_products'>
-          {sixthdata?.data?.data.map((item) => (
+          {data2?.data?.data.slice(0,9).map((item) => (
               <ProductCard key={item.id} product_name={item.product_name} product_image={item.product_image} product_new_price={item.product_new_price} product_old_price={item.product_old_price} documentId={item.documentId} product_discription={item.product_discription}/>
               
             ))}
           </div>
           <div className='tab_products'>
-          {seventhdata?.data?.data.map((item) => (
+          {data2?.data?.data.slice(9,18).map((item) => (
               <ProductCard key={item.id} product_name={item.product_name} product_image={item.product_image} product_new_price={item.product_new_price} product_old_price={item.product_old_price} documentId={item.documentId} product_discription={item.product_discription}/>
               
             ))}

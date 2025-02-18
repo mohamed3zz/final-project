@@ -1,0 +1,22 @@
+.RegisterInput {
+    display: flex;
+    flex-direction: column;
+    gap: .2em;
+    margin-block: 1em;
+    & label {
+        font-weight: 600;
+        padding-left: .4em;
+
+    }
+    & input {
+        border: none;
+        background: #f2f2f2;
+        // border: 1px solid rgba(0, 0, 0, 0.2);
+        padding: 1em ;
+        // border-radius: 1em;
+        width: 20em;
+        outline: none;
+        
+
+    }
+}

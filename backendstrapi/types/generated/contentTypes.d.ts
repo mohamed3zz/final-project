@@ -369,134 +369,6 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiProduct2Product2 extends Struct.CollectionTypeSchema {
-  collectionName: 'product2s';
-  info: {
-    displayName: 'product2';
-    pluralName: 'product2s';
-    singularName: 'product2';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::product2.product2'
-    > &
-      Schema.Attribute.Private;
-    product_discription: Schema.Attribute.Text & Schema.Attribute.Required;
-    product_image: Schema.Attribute.Text & Schema.Attribute.Required;
-    product_name: Schema.Attribute.String & Schema.Attribute.Required;
-    product_new_price: Schema.Attribute.String & Schema.Attribute.Required;
-    product_old_price: Schema.Attribute.String & Schema.Attribute.Required;
-    publishedAt: Schema.Attribute.DateTime;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiProduct3Product3 extends Struct.CollectionTypeSchema {
-  collectionName: 'product3s';
-  info: {
-    displayName: 'product3';
-    pluralName: 'product3s';
-    singularName: 'product3';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::product3.product3'
-    > &
-      Schema.Attribute.Private;
-    product_discription: Schema.Attribute.Text & Schema.Attribute.Required;
-    product_image: Schema.Attribute.Text & Schema.Attribute.Required;
-    product_name: Schema.Attribute.String & Schema.Attribute.Required;
-    product_new_price: Schema.Attribute.String & Schema.Attribute.Required;
-    product_old_price: Schema.Attribute.String & Schema.Attribute.Required;
-    publishedAt: Schema.Attribute.DateTime;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiProduct4Product4 extends Struct.CollectionTypeSchema {
-  collectionName: 'product4s';
-  info: {
-    displayName: 'product4';
-    pluralName: 'product4s';
-    singularName: 'product4';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::product4.product4'
-    > &
-      Schema.Attribute.Private;
-    product_discription: Schema.Attribute.Text & Schema.Attribute.Required;
-    product_image: Schema.Attribute.Text & Schema.Attribute.Required;
-    product_name: Schema.Attribute.String & Schema.Attribute.Required;
-    product_new_price: Schema.Attribute.String & Schema.Attribute.Required;
-    product_old_price: Schema.Attribute.String & Schema.Attribute.Required;
-    publishedAt: Schema.Attribute.DateTime;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiProduct5Product5 extends Struct.CollectionTypeSchema {
-  collectionName: 'product5s';
-  info: {
-    displayName: 'product5';
-    pluralName: 'product5s';
-    singularName: 'product5';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::product5.product5'
-    > &
-      Schema.Attribute.Private;
-    product_discription: Schema.Attribute.Text & Schema.Attribute.Required;
-    product_image: Schema.Attribute.Text & Schema.Attribute.Required;
-    product_name: Schema.Attribute.String & Schema.Attribute.Required;
-    product_new_price: Schema.Attribute.String & Schema.Attribute.Required;
-    product_old_price: Schema.Attribute.String & Schema.Attribute.Required;
-    publishedAt: Schema.Attribute.DateTime;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface ApiProduct6Product6 extends Struct.CollectionTypeSchema {
   collectionName: 'product6s';
   info: {
@@ -515,38 +387,6 @@ export interface ApiProduct6Product6 extends Struct.CollectionTypeSchema {
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::product6.product6'
-    > &
-      Schema.Attribute.Private;
-    product_discription: Schema.Attribute.Text & Schema.Attribute.Required;
-    product_image: Schema.Attribute.Text & Schema.Attribute.Required;
-    product_name: Schema.Attribute.String & Schema.Attribute.Required;
-    product_new_price: Schema.Attribute.String & Schema.Attribute.Required;
-    product_old_price: Schema.Attribute.String & Schema.Attribute.Required;
-    publishedAt: Schema.Attribute.DateTime;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiProduct7Product7 extends Struct.CollectionTypeSchema {
-  collectionName: 'product7s';
-  info: {
-    displayName: 'product7';
-    pluralName: 'product7s';
-    singularName: 'product7';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::product7.product7'
     > &
       Schema.Attribute.Private;
     product_discription: Schema.Attribute.Text & Schema.Attribute.Required;
@@ -1103,12 +943,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
-      'api::product2.product2': ApiProduct2Product2;
-      'api::product3.product3': ApiProduct3Product3;
-      'api::product4.product4': ApiProduct4Product4;
-      'api::product5.product5': ApiProduct5Product5;
       'api::product6.product6': ApiProduct6Product6;
-      'api::product7.product7': ApiProduct7Product7;
       'api::products.products': ApiProductsProducts;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
