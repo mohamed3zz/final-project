@@ -11,14 +11,14 @@ export default function Footer() {
   return (
     <footer className='footer'>
       <div className='footer_content'>
-        <ul>
+        <ul  className='lg-footer' >
           <li className='footer_logo'><h3>MOTOSPORT</h3></li>
           <li>Praesent nec nisl a purus blandit viverra. Pellentesque habitant morbi tristique senectuse.</li>
           <li>Address: 1234 Heaven Stress,USA.</li>
           <li>Email: hello@domain.com</li>
           <li>Fax: (+84) 1800 68 68</li>
         </ul>
-        <ul>
+        <ul className='footer_desktop'>
           <li className='footer_title'>Info</li>
           <li>Custom Service</li>
           <li>F.A.Q.'s</li>
@@ -27,7 +27,7 @@ export default function Footer() {
           <li>Events</li>
           <li>Popular</li>
         </ul>
-        <ul>
+        <ul className='middle_footer_mobile'>
           <li className='footer_title'>Services</li>
           <li>Sitemap</li>
           <li>Privacy Policy</li>
@@ -36,7 +36,7 @@ export default function Footer() {
           <li>Term & Condition</li>
           <li>Contact Us</li>
         </ul>
-        <ul>
+        <ul  className='footer_desktop'>
           <li className='footer_title'>Account</li>
           <li>About Us</li>
           <li>Delivery Information</li>

@@ -1,0 +1,193 @@
+// .AboutUsPage {
+//    height: 400vh;
+//     &.sec1 {
+//         height: 100vh;
+//         background-color: red;
+//         position: relative;
+//         & img {
+//             width: 100%;
+//         }
+//         & .sec1_content {
+//             position: absolute;
+//             color: aliceblue;
+//         }
+//     }
+// }
+.AboutUsPage {
+    h1{
+        text-align: center;
+        font-size: 2.5em;
+        font-weight: 600;
+        margin-block: 1em;
+    }
+    & .aboutsec1 {
+        background-image: url("	https://motosport-store-newdemo.myshopify.com/cdn/shop/files/breadcumb.jpg?v=1721459508&");
+        background-size:cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 50vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        margin-bottom: 5em;
+        & h1 {
+            text-align: center;
+            font-size: 3.5em;
+            font-weight: 600;
+            // transform: translateX(-50%);
+        }
+
+    }
+    & .aboutsec2 {
+        display: flex;
+        justify-content: space-between;
+        gap: 2em;
+        padding-inline: 1em;
+        margin-bottom: 8em;
+        & .aboutsec2_content {
+            display: flex;
+            flex-direction: column;
+            gap: 2em;
+            & .aboutsec2_content_title {
+                h2 {
+                    font-size: 3em;
+                    font-weight: 800;
+
+                }
+                h6 {
+                  opacity: .6;
+                }
+            }
+            p {
+                opacity: .4;
+                line-height: 1.5em;
+                font-size: 1.5em;
+                font-weight: 400;
+
+            }
+            
+        }
+        & .aboutsec2_img {
+            border-radius: 1em;
+            // overflow: hidden;
+            & img {
+                border-radius: 1em;
+            }
+        }
+
+    }
+    & .aboutsec3 {
+        display: flex;
+        justify-content: space-between;
+        gap: 2em;
+        padding-inline: 1em;
+        & .aboutsec3_img {
+            border-radius: 1em;
+            // overflow: hidden;
+            & img {
+                border-radius: 1em;
+            }
+        }
+        & .aboutsec3_content {
+            display: flex;
+            flex-direction: column;
+            gap: 2em;
+            & .aboutsec3_content_title {
+                h2 {
+                    font-size: 3em;
+                    font-weight: 800;
+
+                }
+                h6 {
+                  opacity: .6;
+                }
+            }
+            p {
+                opacity: .4;
+                line-height: 1.5em;
+                font-size: 1.5em;
+                font-weight: 400;
+
+            }
+            
+        }
+
+    }
+    & .aboutsec4 {
+        margin-top: 8em;
+        background-image: url("https://motosport-store-newdemo.myshopify.com/cdn/shop/files/about1-3.jpg?v=1721464453&");
+        background-size:cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 80vh;
+        display: flex;
+        gap: 1em;
+        justify-content: center;
+        align-items: center;
+        padding-inline: 5em;
+        & .container {
+            display: flex;
+            flex-direction: column;
+            gap: 2em;
+            text-align: center;
+            font-size: 1.2em;
+            h2 {
+                color: #fff;
+                padding-bottom: .5em;
+                border-bottom: 1px solid #fff;
+                width: fit-content;
+                margin: auto;
+            }
+            p {
+                color: #fff;
+                opacity: .7;
+                text-align: center;
+            }
+        }
+    }
+}
+@media (max-width: 480px) {
+    .AboutUsPage {
+        & .aboutsec2 {
+            flex-direction: column;
+            & .aboutsec2_content {
+                gap: 2em;
+                & .aboutsec2_content_title {
+                    h2 {
+                        margin-bottom: .1em;
+                    }
+                }
+            }
+            & .aboutsec2_img {
+                width: 100%;
+                & img {
+                    width: 100%;
+
+                }
+            }
+        }
+        & .aboutsec3 {
+            flex-direction: column-reverse;
+            & .aboutsec3_content {
+                gap: 2em;
+                & .aboutsec3_content_title {
+                    h2 {
+                        margin-bottom: .1em;
+                    }
+                }
+            }
+            & .aboutsec3_img {
+                width: 100%;
+                & img {
+                    width: 100%;
+
+                }
+            }
+        }
+        & .aboutsec4 {
+            display: none;
+        }
+    }
+    
+}

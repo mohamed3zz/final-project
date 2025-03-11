@@ -1,0 +1,122 @@
+.ShoppingCartPage {
+    margin-top: 2em;
+    margin: auto;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 1em;
+    padding: 2em;
+    background: #fff;
+
+    h2 {
+        text-align: center;
+        font-size: 2em;
+        font-weight: 800;
+        margin-bottom: .5em;
+    }
+    
+      h3 {
+        padding-inline: 3em;
+      }
+      & .ShoppingCartPage_total {
+          margin: auto;
+        //   display: flex;
+        //   flex-direction: column;
+          gap: 1em;
+          text-align: center;
+        //   background: #808080;
+          width: fit-content;
+          padding-block: 1em;
+          padding-inline: 0%;
+
+      }
+      .totalPrice {
+        font-weight: 500;
+        font-size: 1em;
+        color: #ff6600;
+        // margin: auto;
+        // text-align: center;
+
+
+      }
+    
+    & .ShoppingCartPage_container {
+        display: flex;
+        // justify-content: space-between;
+        // margin: 3em 2em;
+        gap: 1.5em;
+        flex-wrap: wrap;
+    align-items: center;
+    padding: 2em;
+    // border-radius: 1em;
+    // box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    height: fit-content;
+    width: fit-content;
+    // border: 1px solid rgba(0, 0, 0, 0.2);
+    // margin: auto;
+    // background: #fff;
+    
+    
+    }
+    .emptyCart {
+        text-align: center;
+        p {
+            font-size: 6em;
+            font-weight: 300;
+            margin-block: 1em;
+            opacity: .6;
+        }
+        a {
+            border: 1px solid rgba(0, 0, 0, 0.5);
+            padding: .5em 1em;
+            border-radius: .5em;
+            text-decoration: none;
+            color: rgba(0, 0, 0, 0.8);
+            transition: .3s;
+            font-size: 2em;
+            &:hover {
+                background: rgba(0, 0, 0, 0.8);
+                color: #fff;
+
+            }
+        }
+
+    }
+}
+.ShoppingCartPage_container .productCard {
+   width: 26.5em;
+   height: 38em;
+   border-radius: 1em;
+   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+   border: 1px solid rgba(0, 0, 0, 0.2);
+   
+}
+@media (max-width: 480px) {
+    .ShoppingCartPage {
+        & .ShoppingCartPage_container {
+
+        }
+    }
+    .ShoppingCartPage_container .productCard {
+        width: 47.5%;
+        height: 25em;
+        & .productCard_img {
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            & img {
+                height: 10em;
+                object-fit: cover;
+                width: 100%;
+    
+            }
+        }
+        & .productCard_content {
+            display: flex;
+            flex-direction: column;
+            gap: .2em;
+            text-align: center;
+            font-size: .7em;
+        }
+    }
+    
+ }

@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "users_data",
+  "info": {
+    "singularName": "users-dataa",
+    "pluralName": "users-data",
+    "displayName": "users-data"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "admin::user"
+    },
+    "cart": {
+      "type": "json",
+      "required": true
+    },
+    "wishlist": {
+      "type": "json",
+      "required": true
+    },
+    "profileData": {
+      "type": "json",
+      "required": true
+    }
+  }
+}

@@ -1,46 +1,84 @@
-import React from 'react'
+import React, { useEffect , useState } from 'react'
 import { NavLink } from 'react-router-dom'
+import { IoMdMenu } from "react-icons/io";
+import { FaMotorcycle } from "react-icons/fa6";
+// import { useCart } from '../../context/CartContext';
 
 export default function Menu() {
-  // const pages = document.querySelector(".pages");
-  // const pagesmenu = document.querySelector(".pagesmenu");
+  const [isMoving, setIsMoving] = useState(false);
 
-  // pages.addEventListener("mouseover", () => {
-  //   pagesmenu.classList.add("activepagesmenu");
-  // });
-  // pages.addEventListener("mouseout", () => {
-  //   pagesmenu.classList.remove("activepagesmenu");
-  // });
+  const handleClick = () => {
+    setIsMoving(true);
+    setTimeout(() => {
+      setIsMoving(false);
+    }, 2000);
+  };
+  useEffect(() => {
+    const pages = document.querySelector(".pages");
+    const pagesmenu = document.querySelector(".pagesmenu");
+    const mobilemenu = document.querySelector(".mobilemenu");
+    const desktopmenu = document.querySelector(".desktopmenu");
  
+    pages.addEventListener("mouseover", () => {
+      pagesmenu.classList.add("activepagesmenu");
+    });
+    pages.addEventListener("mouseout", () => {
+      pagesmenu.classList.remove("activepagesmenu");
+    });
+    pagesmenu.addEventListener("mouseover", () => {
+      pagesmenu.classList.add("activepagesmenu");
+    })
+    pagesmenu.addEventListener("mouseout", () => {
+      pagesmenu.classList.remove("activepagesmenu");
+    })
+ 
+    mobilemenu.addEventListener("click", () => {
+      desktopmenu.classList.toggle("activemobilemenu");
+    });
+    
+
+   
+    },[])
+    useEffect(() => {
+      const pages = document.querySelector(".pages");
+      const pagesmenumobile = document.querySelector(".pagesmenumobile");
+      pages.addEventListener("click", () => {
+        pagesmenumobile.classList.toggle("activepagesmenumobile");
+      });
+
+      },[])
+     
+
   
 
   return (
     <div className='navbar_menu'>
-      <ul>
+      <ul style={{display: "flex", justifyContent: "space-between", alignItems: "center" , width: "100%", position: "relative"}}>
+        <li className='mobilemenu' style={{fontSize: "1.2em"}}>
+        <IoMdMenu />
+        </li>
         <li>
         <NavLink to={"/"}>HOME</NavLink>
         </li>
-        <li className='shops'>
-        <NavLink>SHOPS</NavLink>
+        <div className='desktopmenu' >
+        <li onClick={()=> document.querySelector(".desktopmenu").classList.remove("activemobilemenu")}>
+        <NavLink to={"/productspage"}>PRODUCTS</NavLink>
         </li>
-        <li>
-        <NavLink>PRODUCTS</NavLink>
-        </li>
-        <li>
+        <li onClick={()=> document.querySelector(".desktopmenu").classList.remove("activemobilemenu")}>
         <NavLink>BLOG</NavLink>
         </li>
-        <li className='pages' 
-        onmouse={() => {
-          pagesmenu.classList.add("activepagesmenu");
-        }}
-        onmouseleave={() => {
-          pagesmenu.classList.remove("activepagesmenu");
-        }
-      }
-        
-        >
+        <li className='pages'>
         <NavLink>PAGES</NavLink>
         </li>
+        <li>
+        <FaMotorcycle 
+        className='motorcycle-icon'
+          // className={`motorcycle-icon ${isMoving ? "move" : ""}`}
+          // onClick={handleClick}
+        />
+        </li>
+        </div>
+        
       </ul>
       <div className='pagesmenu'>
         <ul>
@@ -50,6 +88,21 @@ export default function Menu() {
         </ul>
 
       </div>
+      <div className='pagesmenumobile '>
+        <ul>
+          <li onClick={() => {document.querySelector(".pagesmenumobile").classList.remove("activepagesmenumobile");
+          document.querySelector(".desktopmenu").classList.remove("activemobilemenu");
+          }}><NavLink to="/aboutus">AboutUs</NavLink></li>
+          <li onClick={() => {document.querySelector(".pagesmenumobile").classList.remove("activepagesmenumobile");
+          document.querySelector(".desktopmenu").classList.remove("activemobilemenu");
+          }} ><NavLink to="/contactus">ContactUs</NavLink></li>
+          <li onClick={() => {document.querySelector(".pagesmenumobile").classList.remove("activepagesmenumobile");
+          document.querySelector(".desktopmenu").classList.remove("activemobilemenu");
+          }} ><NavLink to="/faqs">FAQS</NavLink></li>
+        </ul>
+
+      </div>
+      
     </div>
   )
 }

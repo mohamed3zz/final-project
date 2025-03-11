@@ -8,12 +8,12 @@ export const getproducts = () => {
         queryFn:  () => AxiosConfig("api/product"),
    } );
 }
-export const getsixthproducts = () => {
-   return useQuery({ 
-        queryKey: ['product6'],
-        queryFn:  () => AxiosConfig("api/product6s"),
-   } );
-}
+// export const getsixthproducts = () => {
+//    return useQuery({ 
+//         queryKey: ['product6'],
+//         queryFn:  () => AxiosConfig("api/product6s"),
+//    } );
+// }
 
 export const getSingleproduct = (documentId) => {
 
@@ -22,9 +22,9 @@ export const getSingleproduct = (documentId) => {
         queryFn:  () => AxiosConfig(`api/product/${documentId}`),
    } );
 }
-export const getsixthSingleproduct = (documentId) => {
-   return useQuery({ 
-        queryKey: ['product6'],
-        queryFn:  () => AxiosConfig(`api/product6s/${documentId}`),
-   } );
-}
+// export const getsixthSingleproduct = (documentId) => {
+//    return useQuery({ 
+//         queryKey: ['product6'],
+//         queryFn:  () => AxiosConfig(`api/product6s/${documentId}`),
+//    } );
+// }
