@@ -98,6 +98,7 @@ function removeactivecontainer () {
         <div className='sec1_content'>
         <h4>Motosport Garage</h4>
         <h1>Find The Best MotorBike parts for your vechile</h1>
+        {/* <h1>mohamed</h1> */}
         <NavLink to={"/productspage"}><Button text={"SEE MORE"}/></NavLink>
         </div>
       </div>

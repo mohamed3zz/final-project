@@ -123,7 +123,7 @@
             flex-shrink: 0;
             scroll-snap-align: start;
             width: calc((100% - 3em) / 3);
-            width: 99%;
+            width: 100%;
 
 
 
@@ -241,6 +241,8 @@ img {
 }
 .section6 {
     height: fit-content;
+    margin-bottom: 3em;
+
     & .images_container {
         display: flex;
         justify-content: center;
