@@ -77,20 +77,20 @@ function removeactivecontainer () {
   }
   const {data } = getproducts();
   console.log(data?.data?.data);
- useEffect(() => {
-          const productcard = document.querySelectorAll(".productCard");
-          const producticons = document.querySelectorAll(".productCard_img .productCard_icon");
-          setTimeout(() => {
-            productcard.forEach((card , index) => {
-              card.addEventListener("mouseover" , () => {
-                producticons[index].classList.add("activeicons");
-              })
-              card.addEventListener("mouseleave" , () => {
-                producticons[index].classList.remove("activeicons");
-              })
-            })
-          }, 0);
-        },[])
+//  useEffect(() => {
+//           const productcard = document.querySelectorAll(".productCard");
+//           const producticons = document.querySelectorAll(".productCard_img .productCard_icon");
+//           setTimeout(() => {
+//             productcard.forEach((card , index) => {
+//               card.addEventListener("mouseover" , () => {
+//                 producticons[index].classList.add("activeicons");
+//               })
+//               card.addEventListener("mouseleave" , () => {
+//                 producticons[index].classList.remove("activeicons");
+//               })
+//             })
+//           }, 0);
+//         },[])
 
   return (
     <div className='homePage'>

@@ -71,6 +71,7 @@
     .SignUpPage {
         height: fit-content;
         padding-bottom: 2em;
+        padding-inline: 5em ;
     }
     .SignUp {
         height: fit-content;
@@ -78,6 +79,15 @@
         & .SignUpContainer {
             p {
                 font-size: 2.5em;
+            }
+        }
+    }
+    .SignUpContainer {
+        & .name {
+            & .RegisterInput {
+                input::placeholder {
+                    font-size: .9em;
+                }
             }
         }
     }

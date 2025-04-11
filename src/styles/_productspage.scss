@@ -21,3 +21,18 @@
     
     }
 }
+@media (max-width: 480px) {
+    .ProductsPage {
+        width: 100%;
+        & .ProductsPage_container {
+            gap: 1.5em;
+            width: 100%;
+            & .productCard {
+                width: calc((100% - 1.5em) / 2);
+                
+            }
+        }
+
+    }
+    
+}

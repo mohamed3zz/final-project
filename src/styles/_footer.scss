@@ -109,6 +109,17 @@ svg:hover {
 }
 @media (max-width: 480px) {
     .footer {
+        // height: 5em;
+        padding: 0 !important;
+        // position: absolute;
+        bottom: 0;
+        margin-bottom: 0 !important;
+        // margin-top: 9em;
+        // color: #fff;
+        // background: #000;
+        font-size: .8em;
+        // margin-top: 2em;
+        // margin-bottom: 0 !important;
         & .footer_content {
             // gap: 2em;
             &.lg-footer {
@@ -136,7 +147,10 @@ svg:hover {
             display: none;
          }
         }
+       
+        
 
     }
     
+   
 }

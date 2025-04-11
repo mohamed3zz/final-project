@@ -66,6 +66,7 @@
         flex-direction: column;
         gap: .4em;
         text-align: center;
+        // margin-inline: 1em;
         & .productCard_content_price {
             display: flex;
             flex-direction: row;
@@ -154,4 +155,17 @@
 }
 .activeicons {
     bottom: .8em!important;
+}
+@media (max-width: 480px) {
+    .productCard {
+        & .productCard_img {
+            & .productCard_icon {
+                font-size: .8em !important;
+                left: 1.3em !important ;
+            }
+
+        }
+
+    }
+    
 }

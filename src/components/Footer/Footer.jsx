@@ -73,8 +73,11 @@ export default function Footer() {
         <GrAmex />
         </div>
       </div>
+      
 
     </footer>
+    
+
 
   )
 }

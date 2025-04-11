@@ -95,8 +95,10 @@ export default function ProductCard({
                     </div>
                 )}
                 {inWishlist && (
-                    <div style={{ display: "flex", flexDirection: "column", gap: "1em" }}>
-                        <Button text={"Remove from wishlist"}onClick={onRemove}/>
+                    <div style={{ display: "flex", flexDirection: "column",
+                     gap: "1em"
+                      }}>
+                        <Button className="remove-btn" text={"Remove from wishlist"}onClick={onRemove}/>
                     </div>
                 )}
                 

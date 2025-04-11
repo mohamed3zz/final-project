@@ -270,6 +270,15 @@ img {
     
 }
 .productCard {
+    &:hover {
+        & .productCard_img {
+            & .productCard_icon {
+                bottom: .8em !important;
+
+            }
+        }
+
+    }
     & .productCard_img {
         & .productCard_icon {
             position: absolute;
@@ -387,6 +396,7 @@ img {
         // margin-top: 4em;
         & .tabs {
             margin-top: 0em !important;
+            font-size: .7em !important;
         }
         & .tabs_container  {
             margin-top: 2em !important;
@@ -404,7 +414,7 @@ img {
         & .productCard_img {
             & .productCard_icon {
                 gap: .2em !important;
-                left: 1.5em !important;
+                left: 1em !important;
                 & svg {
                     font-size: .5em;
                     padding: .1em;

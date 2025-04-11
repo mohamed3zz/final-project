@@ -138,7 +138,8 @@
                 flex-direction: column;
                 position: absolute;
                 top: -20em;
-                left: .2em;
+                // left: .2em;
+                left: -1.3em;
                 transition: all .3s ease-in-out;
                 z-index: 5;
                 background-color: #fff;
@@ -150,7 +151,7 @@
                 // }
             }
             & .activemobilemenu {
-                top: 6.3em;
+                top: 4.3em;
             }
             & .pagesmenumobile {
                 display: flex;
@@ -233,3 +234,9 @@
     }
   }
   
+  @media (max-width: 480px) {
+    .motorcycle-icon {
+        display: none;
+    }
+    
+  }
