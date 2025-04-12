@@ -16,3 +16,10 @@ export const getSingleproduct = (documentId) => {
         queryFn:  () => AxiosConfig(`api/product/${documentId}`),
    } );
 }
+export const getblogs = (documentId) => {
+
+   return useQuery({ 
+        queryKey: ['blog'],
+        queryFn:  () => AxiosConfig("api/blog"),
+   } );
+}

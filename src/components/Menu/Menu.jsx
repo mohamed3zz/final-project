@@ -84,7 +84,7 @@ pages.addEventListener("click", () => {
         <NavLink to={"/productspage"}>PRODUCTS</NavLink>
         </li>
         <li onClick={()=> document.querySelector(".desktopmenu").classList.remove("activemobilemenu")}>
-        <NavLink>BLOG</NavLink>
+        <NavLink to={"/blogs"}>BLOG</NavLink>
         </li>
         <li className='pages'>
         <NavLink>PAGES</NavLink>

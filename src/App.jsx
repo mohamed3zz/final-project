@@ -18,6 +18,7 @@ import ProductsPage from './pages/ProductsPage/ProductsPage'
 import { Toaster } from 'react-hot-toast'
 import ProfilePage from './pages/ProfilePage/ProfilePage'
 import { AuthProvider } from './context/AuthContext'
+import BlogsPage from './pages/BlogsPage/BlogsPage'
 
 
 
@@ -36,6 +37,7 @@ export default function App() {
       {path: "/aboutus", element: <AboutUsPage/>},
       {path: "/contactus", element: <ContactUsPage/>},
       {path: "/faqs" , element: <FaqsPage/>},
+      {path: "/blogs" , element: <BlogsPage/>},
       {path: "/cart" , element: <ShoppingCartPage/>},
       {path: "/cart/:id" , element: <SingleProductPage/>},
       {path: "/wishlist" , element: <WishlistPage/>},

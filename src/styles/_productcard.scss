@@ -37,7 +37,8 @@
             display: flex;
             flex-direction: row;
             gap: .8em;
-            left: 8em;
+            left: 50%;
+            transform: translateX(-50%);
             transition: .4s;
             z-index: 10;
             // display: none;
@@ -160,8 +161,9 @@
     .productCard {
         & .productCard_img {
             & .productCard_icon {
-                font-size: .8em !important;
-                left: 1.3em !important ;
+                font-size: .7em !important;
+                left: 50% !important ;
+                transform: translateX(-50%) !important;
             }
 
         }

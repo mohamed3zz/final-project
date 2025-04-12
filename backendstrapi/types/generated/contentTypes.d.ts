@@ -369,6 +369,34 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiBlogsBlogs extends Struct.CollectionTypeSchema {
+  collectionName: 'blog';
+  info: {
+    description: '';
+    displayName: 'Blogs';
+    pluralName: 'blog';
+    singularName: 'blogs';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    blog_content: Schema.Attribute.Text & Schema.Attribute.Required;
+    blog_image: Schema.Attribute.Text & Schema.Attribute.Required;
+    blog_title: Schema.Attribute.Text & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::blogs.blogs'> &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
   collectionName: 'categories';
   info: {
@@ -1003,6 +1031,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::blogs.blogs': ApiBlogsBlogs;
       'api::category.category': ApiCategoryCategory;
       'api::product6.product6': ApiProduct6Product6;
       'api::products.products': ApiProductsProducts;

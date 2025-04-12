@@ -52,7 +52,10 @@
         }
     }
     & .navbar_logo {
-        margin-right: 15em;
+        // margin-right: 15em;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
     } 
     & .navbar_menu {
         font-size: .8em;
@@ -126,7 +129,9 @@
 @media (max-width: 480px) {
     .navbar {
         & .navbar_logo {
-            margin-right: 0;
+            // margin-right: 0;
+            left: 50%;
+            transform: translateX(-50%);
             
         }
         & .navbar_menu {
