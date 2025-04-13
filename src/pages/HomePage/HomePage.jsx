@@ -93,6 +93,7 @@ function removeactivecontainer () {
 //         },[])
 
   return (
+    
     <div className='homePage'>
       <div className='section1'>
         <div className='sec1_content'>
@@ -122,6 +123,7 @@ function removeactivecontainer () {
       </div>
       <div className='section3'>
         <h3>FEATURE PRODUCTS</h3>
+        <div data-aos="fade-down">
         <Motion.div className='container' >
           <Motion.div drag="x" className='inner'>
             <Motion.div className='slide'>
@@ -156,7 +158,7 @@ function removeactivecontainer () {
           </Motion.div>
 
         </Motion.div>
-
+</div>
       </div>
       <div className='section4'>
         <div className='container'>
@@ -187,6 +189,7 @@ function removeactivecontainer () {
           <h5 className='tab'>SPECIAL OFFERS</h5>
         </div>
         <div className='tabs_container'>
+        <div data-aos="fade-down">
           <div className='tab_products active_products'>
           {Array.isArray(data?.data?.data) && data.data.data.slice(0,9).map((item) => (
               <ProductCard key={item.id} product_name={item.product_name} product_image={item.product_image} product_new_price={item.product_new_price} product_old_price={item.product_old_price} documentId={item.documentId} product_discription={item.product_discription}/>
@@ -198,13 +201,14 @@ function removeactivecontainer () {
               <ProductCard key={item.id} product_name={item.product_name} product_image={item.product_image} product_new_price={item.product_new_price} product_old_price={item.product_old_price} documentId={item.documentId} product_discription={item.product_discription} />
               
             ))}
-          </div>
+            </div>
+          
           <div className='tab_products'>
           {Array.isArray(data?.data?.data) && data.data.data.slice(7,16).map((item) => (
               <ProductCard key={item.id} product_name={item.product_name} product_image={item.product_image} product_new_price={item.product_new_price} product_old_price={item.product_old_price} documentId={item.documentId} product_discription={item.product_discription} />
               
             ))}
-            
+            </div>
           </div>
 
         </div>
@@ -224,6 +228,7 @@ function removeactivecontainer () {
       </div>
     
     </div>
+   
 
   )
 }

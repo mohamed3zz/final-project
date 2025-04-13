@@ -65,6 +65,7 @@ export default function ContactUsPage() {
             <div className='ContactForm'>
 
             <h2>Contact Form</h2>
+          <div data-aos="fade-down">
             <Formik
   initialValues={{ name: "", email: "", message: "" }}
   onSubmit={(values, { resetForm }) => {
@@ -93,7 +94,7 @@ export default function ContactUsPage() {
 </Formik>
             </div>
           </div>
-      
+      </div>
     </div>
   )
 }

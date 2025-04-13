@@ -24,8 +24,9 @@ export default function AboutUsPage() {
           {/* <h1>ABOUT US</h1> */}
           <div className='aboutsec1'>
             <h1>ABOUT US</h1>
-          </div>
+            </div>
           <div className='aboutsec2'>
+
             <div className='aboutsec2_content'>
               <div className='aboutsec2_content_title'>
               <h2>Our Story</h2>
@@ -40,8 +41,10 @@ export default function AboutUsPage() {
             
 
             </div>
-
-          </div>
+            
+        
+</div>
+          
           <div className='aboutsec3'>
           <div className='aboutsec3_img'>
               <img src="https://motosport-store-newdemo.myshopify.com/cdn/shop/files/about1-2.jpg?v=1721464451&width=896" alt="" />
@@ -53,13 +56,11 @@ export default function AboutUsPage() {
               </div>
               <p>Praesent metus tellus, elementum eu, semper a, adipiscing nec, purus. Vestibulum volutpat pretium libero. In ut quam vitae odio lacinia tincidunt. Etiam ut purus mattis mauris sodales aliquam. Aenean massa.</p>
               <p>In dui magna, posuere eget, vestibulum et, tempor auctor, justo. Vivamus consectetuer hendrerit lacus. In hac habitasse platea dictumst. Ut tincidunt tincidunt erat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-
-            
-
 </div>
 
           </div>
           <div className='aboutsec4'>
+          <div data-aos="fade-down" className='aboutsec4_content'>
             <div className='container'>
               <h2>Design</h2>
               <p>Praesent metus tellus, elementum eu, semper Vestibulum volutpat pretium libero</p>
@@ -72,7 +73,7 @@ export default function AboutUsPage() {
               <h2>Journey</h2>
               <p>Praesent metus tellus, elementum eu, semper Vestibulum volutpat pretium libero</p>
             </div>
-
+</div>
           </div>
         </div>
   )

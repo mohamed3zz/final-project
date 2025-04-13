@@ -115,18 +115,21 @@
 
     }
     & .aboutsec4 {
-        margin-top: 8em;
         background-image: url("https://motosport-store-newdemo.myshopify.com/cdn/shop/files/about1-3.jpg?v=1721464453&");
         background-size:cover;
         background-repeat: no-repeat;
         background-position: center;
-        height: 80vh;
-        display: flex;
-        gap: 1em;
-        justify-content: center;
-        align-items: center;
-        padding-inline: 5em;
-        margin-bottom: 3em;
+        & .aboutsec4_content {
+            height: 80vh;
+            margin-top: 8em;
+            display: flex;
+            gap: 1em;
+            justify-content: center;
+            align-items: center;
+            padding-inline: 5em;
+            margin-bottom: 3em;
+
+        }
         & .container {
             display: flex;
             flex-direction: column;

@@ -19,10 +19,18 @@ import { Toaster } from 'react-hot-toast'
 import ProfilePage from './pages/ProfilePage/ProfilePage'
 import { AuthProvider } from './context/AuthContext'
 import BlogsPage from './pages/BlogsPage/BlogsPage'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 
 export default function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // مدة الأنيميشن بالملي ثانية
+      // once: true,     // يحصل مرة واحدة فقط
+    });
+  }, []);
   const queryClient = new QueryClient()
   defaultoptions:{
     queries: { refetchOnWindowFocus: false }

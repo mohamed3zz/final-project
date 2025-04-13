@@ -23,7 +23,7 @@ export default function ShoppingCartPage() {
     return (
         <div className="ShoppingCartPage">
             <h2> Shopping Cart</h2>
-          
+            <div data-aos="fade-down">
             <div className="ShoppingCartPage_container">
                 {cart.map((item) => (
                     <ProductCard
@@ -38,6 +38,7 @@ export default function ShoppingCartPage() {
 
                     />
                 ))}
+            </div>
             </div>
             {cart.length === 0 ?<div className="emptyCart">
             <p>Cart is empty</p>

@@ -59,6 +59,7 @@ export default function Login() {
         <h4>Login</h4>
         <p>If you have an account with us, please log in.</p>
         {messageinvalid && <p style={{ color: "red", fontSize:"1.2em", fontWeight:"400" }}>{messageinvalid}</p>}
+        <div data-aos="fade-down">
         <Formik validationSchema={loginValidation}
         initialValues={{ email: "", password: "" }}
         onSubmit={onSubmit}>
@@ -68,6 +69,7 @@ export default function Login() {
             <Button text={"Login"} type={"submit"} />
             </Form>
         </Formik>
+        </div>
         <p>Don't have an account? <NavLink to="/SignUp">Sign Up</NavLink></p>
         
       

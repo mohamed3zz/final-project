@@ -36,6 +36,7 @@ const onSubmit = async (values, { setSubmitting, setErrors, resetForm }) => {
     <div ClassName="SignUp" style={{marginBlock: "5em"}}>
     <div className='SignUpContainer'>
       <h4>Sign Up</h4>
+      <div data-aos="fade-down">
       <Formik
         initialValues={{
           username: "", 
@@ -55,6 +56,7 @@ const onSubmit = async (values, { setSubmitting, setErrors, resetForm }) => {
           <Button text={"Sign Up"} type={"submit"} />
         </Form>
       </Formik>
+      </div>
       <p>Already have an account? <NavLink to="/login">Login</NavLink></p>
       </div>
     </div>
