@@ -4,40 +4,7 @@ import { IoMdMenu } from "react-icons/io";
 import { FaMotorcycle } from "react-icons/fa6";
 
 export default function Menu() {
-  // useEffect(() => {
-  //   const pages = document.querySelector(".pages");
-  //   const pagesmenu = document.querySelector(".pagesmenu");
-  //   const mobilemenu = document.querySelector(".mobilemenu");
-  //   const desktopmenu = document.querySelector(".desktopmenu");
-  //   pages.addEventListener("mouseover", () => {
-  //     pagesmenu.classList.add("activepagesmenu");
-  //   });
-  //   pages.addEventListener("mouseout", () => {
-  //     pagesmenu.classList.remove("activepagesmenu");
-  //   });
-  //   pagesmenu.addEventListener("mouseover", () => {
-  //     pagesmenu.classList.add("activepagesmenu");
-  //   })
-  //   pagesmenu.addEventListener("mouseout", () => {
-  //     pagesmenu.classList.remove("activepagesmenu");
-  //   })
- 
-  //   mobilemenu.addEventListener("click", () => {
-  //     desktopmenu.classList.toggle("activemobilemenu");
-  //   });
 
-    
-
-   
-  //   },[])
-    
-  //   useEffect(() => {
-  //   const pages = document.querySelector(".pages");
-  //   const pagesmenumobile = document.querySelector(".pagesmenumobile");
-  //   pages.addEventListener("click", () => {
-  //     pagesmenumobile.classList.toggle("activepagesmenumobile");
-  //   });
-  // } ,[])
   useEffect(() => {
     const pages = document.querySelector(".pages");
     const pagesmenu = document.querySelector(".pagesmenu");

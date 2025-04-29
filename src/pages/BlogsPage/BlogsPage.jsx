@@ -7,7 +7,7 @@ export default function BlogsPage() {
             setTimeout(() => {
                 window.scrollTo({
                     top: 0,
-                    behavior: "smooth",
+                    // behavior: "smooth",
                     
                 })
             }, 0);

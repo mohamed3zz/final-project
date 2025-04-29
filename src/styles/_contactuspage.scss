@@ -33,7 +33,11 @@
         margin-inline: 1em;
         margin-bottom: 5em;
         & .contactsec2_img {
+            width: 100%;
             img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
                 padding-right: 1em;
 
             }

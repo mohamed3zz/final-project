@@ -11,7 +11,7 @@ export default function ContactUsPage() {
           setTimeout(() => {
               window.scrollTo({
                   top: 0,
-                  behavior: "smooth",
+                  // behavior: "smooth",
                   
               })
           }, 0);

@@ -1,11 +1,13 @@
-import React from 'react'
+import React , {useEffect} from 'react'
 import { CiHeart, CiUser } from 'react-icons/ci'
 import { IoBagOutline } from 'react-icons/io5'
 import { NavLink } from 'react-router-dom'
 import { useCart } from '../../context/CartContext'
+
 // import { useCart } from '../../context/CartContext'
 
 export default function NavIcons() {
+
   const { totalItems } = useCart();
   return (
     <div className='navbar_icons'>

@@ -8,7 +8,7 @@ export default function ShoppingCartPage() {
             setTimeout(() => {
                 window.scrollTo({
                     top: 0,
-                    behavior: "smooth",
+                    // behavior: "smooth",
                     
                 })
             }, 0);
@@ -23,7 +23,7 @@ export default function ShoppingCartPage() {
     return (
         <div className="ShoppingCartPage">
             <h2> Shopping Cart</h2>
-            <div data-aos="fade-down">
+            <div className="container" data-aos="fade-down">
             <div className="ShoppingCartPage_container">
                 {cart.map((item) => (
                     <ProductCard

@@ -1,8 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { getproducts } from '../../apis/FetchApi';
 import ProductCard from '../../components/ProductCard/ProductCard';
 
 export default function ProductsPage() {
+      useEffect (() => {
+            setTimeout(() => {
+                window.scrollTo({
+                    top: 0,
+                    // behavior: "smooth",
+                    
+                })
+            }, 0);
+            
+        }, [])
   
      const {data } = getproducts();
   return (

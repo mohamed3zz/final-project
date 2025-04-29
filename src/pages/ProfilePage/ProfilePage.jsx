@@ -6,6 +6,16 @@ import toast from 'react-hot-toast';
 import { GrLogout } from "react-icons/gr";
 
 export default function ProfilePage() {
+  useEffect (() => {
+              setTimeout(() => {
+                  window.scrollTo({
+                      top: 0,
+                      // behavior: "smooth",
+                      
+                  })
+              }, 0);
+              
+          }, [])
   const { user, logout } = useAuth();
   const navigate = useNavigate();
 

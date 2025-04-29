@@ -148,7 +148,7 @@
         // left: 60em;
         right: 5em;
         // top: 0;
-        animation: scale 3s infinite ease-in-out;
+        // animation: scale 3s infinite ease-in-out;
 img {
     width: 100%;
 
@@ -379,9 +379,9 @@ img {
 
             }
             & .container_image {
-                // animation: none !important; 
+                animation: none !important; 
                 bottom: 0;
-                width: 30%;
+                width: 40%;
                 right: .1em;
                 // right: 2em !important;
             }

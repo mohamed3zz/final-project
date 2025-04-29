@@ -6,6 +6,7 @@ import { CiHeart } from "react-icons/ci";
 import { useCart } from '../../context/CartContext';
 import { useWishlist } from '../../context/WishlistContext';
 import toast from 'react-hot-toast';
+import { useAuth } from '../../context/AuthContext';
 
 
 export default function ProductCard({
@@ -19,6 +20,7 @@ export default function ProductCard({
     quantity=1,
      onRemove,
     }) {
+        const { user } = useAuth();
   const {addToCart} = useCart();
   const { addToWishlist } = useWishlist(); 
   const navigate = useNavigate();
@@ -64,15 +66,53 @@ export default function ProductCard({
         }/>
         {(!inCart && !inWishlist)? 
         <div className='productCard_icon'>
-        <BsCartPlus onClick={(e)=>{e.stopPropagation();
+           {/* { (!user)?
+           <BsCartPlus onClick={(e)=>{e.stopPropagation();
             addToCart({ product_name, product_new_price, documentId , product_image});
-            toastcart(product_name);
             }}/>
-        <CiHeart onClick={(e) => {
-  e.stopPropagation();
-  addToWishlist({ product_name, product_new_price, documentId, product_image });
-  toastwishlist(product_name);
-}}/>
+            <CiHeart onClick={(e) => {
+                e.stopPropagation();
+                addToWishlist({ product_name, product_new_price, documentId, product_image });
+            }}/>
+            : <BsCartPlus onClick={(e)=>{e.stopPropagation();
+                addToCart({ product_name, product_new_price, documentId , product_image});
+                toastcart(product_name);
+                }}/>
+            <CiHeart onClick={(e) => {
+      e.stopPropagation();
+      addToWishlist({ product_name, product_new_price, documentId, product_image });
+      toastwishlist(product_name);
+    }}/>
+} */}
+{
+  (!user) ? (
+    <>
+      <BsCartPlus onClick={(e) => {
+        e.stopPropagation();
+        addToCart({ product_name, product_new_price, documentId, product_image });
+      }} />
+      <CiHeart onClick={(e) => {
+        e.stopPropagation();
+        addToWishlist({ product_name, product_new_price, documentId, product_image });
+      }} />
+    </>
+  ) : (
+    <>
+      <BsCartPlus onClick={(e) => {
+        e.stopPropagation();
+        addToCart({ product_name, product_new_price, documentId, product_image });
+        toastcart(product_name);
+      }} />
+      <CiHeart onClick={(e) => {
+        e.stopPropagation();
+        addToWishlist({ product_name, product_new_price, documentId, product_image });
+        toastwishlist(product_name);
+      }} />
+    </>
+  )
+}
+    
+
         </div>
 :''
 }

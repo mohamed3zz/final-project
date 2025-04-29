@@ -5,7 +5,7 @@ export default function FaqsPage() {
           setTimeout(() => {
               window.scrollTo({
                   top: 0,
-                  behavior: "smooth",
+                  // behavior: "smooth",
                   
               })
           }, 0);

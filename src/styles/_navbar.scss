@@ -81,6 +81,16 @@
             }
         }
     }
+    .desktopmenu {
+        gap: 1.5rem !important;
+        li {
+            text-decoration: none;
+            color: $Dark-color;
+            border-bottom: #000;
+            
+        }
+
+    }
 }
 .navbar-show {
     transform: translateY(0);
@@ -106,6 +116,7 @@
     top: -10em;
     // left: .4em;
     transition: all .3s ease-in-out;
+    
     
     // display: none;
     ul {
@@ -230,7 +241,15 @@
     transition: transform 3s ease-in-out;
     animation: moveMotorcycle 4s  ease-in-out infinite;
   }
-  
+  .desktopmenu {
+
+        li {
+            text-align: center;
+            width: 100%;
+            
+        
+    }
+  }
 //   .move {
 //     animation: moveMotorcycle 2s ease-in-out forwards;
 //   }
